@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 100%;
+  background: #23424a;
+  padding: 10vmin;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+.container img {
+  max-height: 250px;
+  animation: appearFromRight 2s;
+}
+.banner {
+  color: white;
+  max-width: 700px;
+  hyphens: auto;
+  text-overflow: ellipsis;
+}
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  animation: scaleDown 1s;
+}
+.banner p,
+.banner a {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  text-align: justify;
+  line-height: 1.5em;
+  animation: appearFromLeft 1s;
+}
+.banner a {
+  padding: 1rem;
+  background-color: #38cfd9;
+  text-decoration: none;
+  color: #23424a;
+  text-transform: uppercase;
+  border-radius: 2em;
+  font-weight: bold;
+  animation: buttonBG 2s;
+}
+.banner a:hover {
+  background-color: #df267c;
+  color: rgb(255, 255, 255);
+}
+
+/* Animations */
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translate(-2rem, 0);
+    color: #23424a;
+  }
+}
+@keyframes appearFromRight {
+  from {
+    opacity: 0;
+    transform: translate(2rem, 0);
+    color: #23424a;
+  }
+}
+@keyframes scaleDown {
+  from {
+    opacity: 0;
+    color: #23424a;
+    transform: scale(2, 1);
+  }
+}
+@keyframes buttonBG {
+  from {
+    opacity: 0;
+    background-color: rgb(106, 184, 177);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container img {
+    display: none;
+  }
+}
